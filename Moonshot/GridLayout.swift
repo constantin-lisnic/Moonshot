@@ -18,9 +18,7 @@ struct GridLayout: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(missions) { mission in
-                    NavigationLink {
-                        MissionView(mission: mission)
-                    } label: {
+                    NavigationLink(value: mission) {
                         MissionThumbnail(mission: mission)
                     }
                 }

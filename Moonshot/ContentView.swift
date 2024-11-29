@@ -29,6 +29,9 @@ struct ContentView: View {
                     showingGrid.toggle()
                 }
             }
+            .navigationDestination(for: Mission.self) { mission in
+                MissionView(mission: mission)
+            }
         }
     }
 }

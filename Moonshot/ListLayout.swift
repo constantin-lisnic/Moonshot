@@ -15,9 +15,7 @@ struct ListLayout: View {
             ForEach(missions) { mission in
                 MissionThumbnail(mission: mission)
                     .overlay {
-                        NavigationLink {
-                            MissionView(mission: mission)
-                        } label: {
+                        NavigationLink(value: mission) {
                             EmptyView()
                         }
                         .opacity(0)
